@@ -1,12 +1,13 @@
 import Breadcrumb from "@/components/breadcrumbs/Breadcrumb";
 import LayoutWrapper from "@/components/layouts/LayoutWrapper";
-import Main from "@/components/validation/Main";
+import Login from "@/components/validation/Login";
+import React from "react";
 
-export default function Home() {
+export default function LoginPage() {
   return (
     <LayoutWrapper>
       <Breadcrumb />
-      <Main />
+      <Login />
     </LayoutWrapper>
   );
 }

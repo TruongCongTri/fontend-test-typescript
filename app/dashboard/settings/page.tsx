@@ -1,12 +1,11 @@
 import Breadcrumb from "@/components/breadcrumbs/Breadcrumb";
 import LayoutWrapper from "@/components/layouts/LayoutWrapper";
-import Main from "@/components/validation/Main";
+import React from "react";
 
-export default function Home() {
+export default function page() {
   return (
     <LayoutWrapper>
       <Breadcrumb />
-      <Main />
     </LayoutWrapper>
   );
 }

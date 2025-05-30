@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// import { Source_Code_Pro } from 'next/font/google'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const sourceCodePro = Source_Code_Pro({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-source-code-pro', // optional for Tailwind usage
+// })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +23,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // className={`${sourceCodePro.variable} antialiased`}
       >
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            style: {
+              background: "black",
+              border: "1px solid white",
+              color: "#00ff88",
+              fontFamily: "monospace",
+            },
+          }}
+        />
         {children}
       </body>
     </html>
