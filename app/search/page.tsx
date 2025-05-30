@@ -59,6 +59,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       {data ? (
         <div>
           <CardList users={data.data.users} />
+
+          {/* <CardList users={data.data.users} /> */}
           <Pagination meta={data.meta.pagination} />
         </div>
       ) : (
